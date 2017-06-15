@@ -3110,3 +3110,15 @@ ex: (vary-meta x assoc :foo 42)"
    :added "0.1"}
   [f x]
   (->Iterate f x))
+
+(defn compare-and-set! 
+  {:doc "Atomically sets the value of the atom to newval iff the current value of atom is oldval. 
+         Returns true if reset happens, else false."
+   :signatures [[atom oldval newval]]
+   :added "0.2"}
+  [atom oldval newval]
+  (if (= @atom oldval)
+    (do
+      (reset! atom newval)
+      true)
+    false)
