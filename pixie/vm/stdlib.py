@@ -63,6 +63,9 @@ defprotocol("pixie.stdlib", "IFinalize", ["-finalize!"])
 
 defprotocol("pixie.stdlib", "IMessageObject", ["-call-method", "-get-attr"])
 
+defprotocol("pixie.stdlib", "IWatch", ["-with-watch"])
+defprotocol("pixie.stdlib", "IValidate", ["-with-validator"])
+
 def maybe_mark_finalizer(self, tp):
     if self is _finalize_BANG_:
         print "MARKING ", tp
