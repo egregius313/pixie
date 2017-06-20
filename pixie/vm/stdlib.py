@@ -281,6 +281,10 @@ def __meta(a):
 def __with_meta(a, b):
     return rt._with_meta(a, b)
 
+@as_var("with-watch")
+def __with_watch(a, b, c):
+    return rt._with_watch(a, b, c)
+
 @returns(bool)
 @as_var("has-meta?")
 def __has_meta(a):
