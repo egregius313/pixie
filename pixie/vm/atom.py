@@ -21,7 +21,7 @@ class Atom(object.Object):
     
     def __init__(self, boxed_value, 
                  meta=nil,
-                 watch_key=nil, watch_fn=nil)
+                 watch_key=nil, watch_fn=nil):
         self._boxed_value = boxed_value
         self._meta = meta
         self._watch_key = watch_key
